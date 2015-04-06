@@ -15,9 +15,10 @@
 	src: url("../font/custom/basictitlefont.ttf") format("truetype");
 }
 
-html{
+html, body{
 	font-family: typo-slab, courier;
-}
+	height: 100%;
+} 
 
 .no-margin-bot {
 	margin: 0 auto 0 !important;
@@ -33,14 +34,49 @@ html{
 
 .nav-link{
 	font-family: bebas-neue;
-	font-size: 1.5em !important;
+	font-size: 1.3em !important;
+}
+
+.dropdown-link{
+	font-family: bebas-neue;
+	font-size: 1.1em !important;
 }
 
 .container-section{
 	box-shadow: 0px 0px 5px 1px #aaaaaa;
+	height: 100%;
+}
+
+.main-text{
+	text-align: justify;
+	font-size: 1.1em;
+}
+
+.social-links > a {
+	color: #7b7b7b;
+}
+.social-links > a:hover{
+	color: #80cbc4;
 }
 
 h1, h2, h3 {
 	font-family: sweet-pea, courier;
 	color: #7b7b7b !important;
+}
+
+.dotted {
+	bottom: 200px;
+	border-style: dotted;
+	border-color: #aaaaaa;
+	border-width: 0.15em 0px 0px 0px!important;
+}
+
+.content-wrapper{
+}
+
+.sticky-footer{
+	border-style: dotted;
+	border-width: 0.15em 0px;
+	border-color: #aaaaaa;
+	height: 2.5em;
 }
