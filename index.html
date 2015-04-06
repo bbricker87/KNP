@@ -3,44 +3,61 @@
     <head>
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
 
+      <script type="text/javascript">
+      var index = 0;
+
+      function CycleImage(){
+      }
+
+        setInterval('CycleImage()', 10000);
+      </script>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     </head>
 
-    <body class="teal lighten-5">
+    <body class="brown lighten-5">
 		<ul id="dropdown1" class="dropdown-content">
-		  <li><a href="#!">Weddings</a></li>
-		  <li><a href="#!">Engagements</a></li>
-		  <li><a href="#!">Maternity</a></li>
-		  <li><a href="#!">Newborns</a></li>
-		  <li><a href="#!">Seniors</a></li>
+		  <li><a class="teal-text text-lighten-3" href="#!">Weddings</a></li>
+		  <li><a class="teal-text text-lighten-3" href="#!">Engagements</a></li>
+		  <li><a class="teal-text text-lighten-3" href="#!">Maternity</a></li>
+		  <li><a class="teal-text text-lighten-3" href="#!">Newborns</a></li>
+		  <li><a class="teal-text text-lighten-3" href="#!">Seniors</a></li>
 		</ul>
 
-		<div class="container hide-on-small-only">
+		<div class="container container-section grey lighten-4">
+			<div class="row">
+				<img id="banner-img"src="img/background1.jpg" style="width: 100%;">
+		</div>
 
-	    <nav>
-		    <div class="nav-wrapper teal lighten-4">
-		      <a href="#" class="brand-logo center">Logo</a>
-		      <ul id="nav-mobile" class="left">
-		        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Galleries<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-		        <li><a href="blog.html">Blog</a></li>
-		      </ul><ul id="nav-mobile" class="right">
-		        <li><a href="schedule.html">Schedule</a></li>
-		        <li><a href="pricing.html">Pricing</a></li>
-		      </ul>
-		    </div>
-	  	</nav>
+		<div class="row no-margin-bot hide-on-small-only nav-div">
+		    <nav class="nav-flat grey lighten-4" style="height: 65px;">
+			    <div class="nav-wrapper">
+			      <a href="#" class="brand-logo center"><img src="img/logos/knp-main.png" style="padding: 4px 0px 7px 0px; height: 65px;"></a>
+			      <ul id="nav-mobile" class="left">
+			        <li><a class="teal-text text-lighten-3 dropdown-button nav-link" href="#!" data-activates="dropdown1">Galleries<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+			        <li><a class="teal-text text-lighten-3 nav-link" href="blog.html">Blog</a></li>
+			      </ul>
+			      <ul id="nav-mobile" class="right nav-list">
+			        <li><a class="teal-text text-lighten-3 nav-link" href="schedule.html">Schedule</a></li>
+			        <li><a class="teal-text text-lighten-3 nav-link" href="pricing.html">Pricing</a></li>
+			      </ul>
+			    </div>
+		  	</nav>
 	  </div>
 
-	  <div class="container">
-	  	<div class="col l8 s12 offset-l2">
+		<div class="row no-margin-bot">
+		  	<div class="col l8 s12 offset-l2">
+		  		<h1 class="center"> About Me </h1>
+		  	</div>
 	  	</div>
 	  </div>
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/cycle2.js"></script>
     </body>
   </html>
 

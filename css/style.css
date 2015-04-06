@@ -1,0 +1,46 @@
+@font-face {
+	  font-family: "typo-slab";
+	  src: url("../font/custom/TypoSlabSerif-Light.ttf") format("truetype");
+}
+@font-face {
+	font-family: "sweet-pea";
+	src: url("../font/custom/sweet-pea.ttf") format("truetype");
+}
+@font-face {
+	font-family: "bebas-neue";
+	src: url("../font/custom/BebasNeue.otf") format("opentype");
+}
+@font-face {
+	font-family: "basic-title";
+	src: url("../font/custom/basictitlefont.ttf") format("truetype");
+}
+
+html{
+	font-family: typo-slab, courier;
+}
+
+.no-margin-bot {
+	margin: 0 auto 0 !important;
+	width: 100%;
+}
+
+.nav-flat{
+	box-shadow: 0px 0px 0px !important;
+	border-style: dotted;
+	border-width: 0.15em 0px;
+	border-color: #aaaaaa;
+}
+
+.nav-link{
+	font-family: bebas-neue;
+	font-size: 1.5em !important;
+}
+
+.container-section{
+	box-shadow: 0px 0px 5px 1px #aaaaaa;
+}
+
+h1, h2, h3 {
+	font-family: sweet-pea, courier;
+	color: #7b7b7b !important;
+}
