@@ -14,6 +14,10 @@
 	font-family: "basic-title";
 	src: url("../font/custom/basictitlefont.ttf") format("truetype");
 }
+@font-face {
+	  font-family: "futura";
+	  src: url("../font/custom/futura.ttf") format("truetype");
+}
 
 html, body{
 	font-family: typo-slab, courier;
@@ -33,29 +37,49 @@ html, body{
 }
 
 .nav-link{
-	font-family: bebas-neue;
-	font-size: 1.3em !important;
+	font-family: futura;
+	font-size: 1.1rem !important;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+}
+
+#navlink > a {
+	color: #7b7b7b !important;
+}
+
+#navlink > a:hover{
+	color: #80cbc4;
+	background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .dropdown-link{
-	font-family: bebas-neue;
-	font-size: 1.1em !important;
+	font-family: futura;
+	text-transform: uppercase;
+	font-size: 1.0rem !important;
+}
+
+.dropdown-link li:hover{
+	color: #80cbc4 !important;
+	background-color: #7b7b7b !important;
 }
 
 .container-section{
 	box-shadow: 0px 0px 5px 1px #aaaaaa;
-	height: 100%;
+	min-height: 100vh;
 }
 
 .main-text{
 	text-align: justify;
-	font-size: 1.1em;
+	font-size: 1.0rem;
+}
+.main-section{
+	padding: 0px 15px;
 }
 
-.social-links > a {
+.social-links > a, .social-links > div > a {
 	color: #7b7b7b;
 }
-.social-links > a:hover{
+.social-links > a:hover, .social-links > div > a:hover{
 	color: #80cbc4;
 }
 
@@ -71,12 +95,20 @@ h1, h2, h3 {
 	border-width: 0.15em 0px 0px 0px!important;
 }
 
-.content-wrapper{
+.footer{
+	font-size: 0.85em;
+	margin-bottom: 0px;
+}
+.footer > a {
+	color: #80cbc4;
+}
+.footer > a:hover {
+	color: #7b7b7b;
 }
 
-.sticky-footer{
-	border-style: dotted;
-	border-width: 0.15em 0px;
-	border-color: #aaaaaa;
-	height: 2.5em;
+.footer-color{
+	font-size: 0.85em;
+	text-transform: uppercase;
+	color: #80cbc4;
+	margin-top: 0px;
 }

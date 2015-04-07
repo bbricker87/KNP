@@ -4800,7 +4800,7 @@ span.badge {
 
 @media only screen and (min-width : 993px) {
   .container {
-    width: 70%; } }
+    width: 850px; } }
 
 .container .row {
   margin-left: -0.75rem;
@@ -5074,7 +5074,8 @@ nav {
       float: left;
       padding: 0; }
       nav ul li:hover, nav ul li.active {
-        background-color: rgba(0, 0, 0, 0.1); }
+        background-color: rgba(0, 0, 0, 0.1); 
+      }
     nav ul a {
       font-size: 1rem;
       color: #fff;
