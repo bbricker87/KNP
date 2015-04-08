@@ -43,15 +43,6 @@ html, body{
 	letter-spacing: 0.15em;
 }
 
-#navlink > a {
-	color: #7b7b7b !important;
-}
-
-#navlink > a:hover{
-	color: #80cbc4;
-	background-color: rgba(0, 0, 0, 0) !important;
-}
-
 .dropdown-link{
 	font-family: futura;
 	text-transform: uppercase;
@@ -74,6 +65,15 @@ html, body{
 }
 .main-section{
 	padding: 0px 15px;
+}
+.main-list{
+	margin: 0px 50px;
+}
+.main-list > li{
+	list-style: circle;
+}
+.indent{
+	margin: 0px 25px;
 }
 
 .social-links > a, .social-links > div > a {
@@ -99,11 +99,17 @@ h1, h2, h3 {
 	font-size: 0.85em;
 	margin-bottom: 0px;
 }
+.main-text > p > a{
+	color: #80cbc4 !important;
+}
 .footer > a {
-	color: #80cbc4;
+	color: #80cbc4 !important;
+}
+.main-text > p > a:hover{
+	color: #7b7b7b !important;
 }
 .footer > a:hover {
-	color: #7b7b7b;
+	color: #7b7b7b !important;
 }
 
 .footer-color{
@@ -111,4 +117,31 @@ h1, h2, h3 {
 	text-transform: uppercase;
 	color: #80cbc4;
 	margin-top: 0px;
+}
+
+  /* label color */
+   .input-field label {
+     color: #7b7b7b;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #80cbc4;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #80cbc4;
+     box-shadow: 0 1px 0 0 #7b7b7b;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #7bdf79;
+     box-shadow: 0 1px 0 0 #7b7b7b;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #d96060;
+     box-shadow: 0 1px 0 0 #7b7b7b;
+   }
+.waves-effect {
+      background-color: #80cbc4;
 }
