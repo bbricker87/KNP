@@ -119,29 +119,43 @@ h1, h2, h3 {
 	margin-top: 0px;
 }
 
-  /* label color */
-   .input-field label {
-     color: #7b7b7b;
-   }
-   /* label focus color */
-   .input-field input[type=text]:focus + label {
-     color: #80cbc4;
-   }
-   /* label underline focus color */
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid #80cbc4;
-     box-shadow: 0 1px 0 0 #7b7b7b;
-   }
-   /* valid color */
-   .input-field input[type=text].valid {
-     border-bottom: 1px solid #7bdf79;
-     box-shadow: 0 1px 0 0 #7b7b7b;
-   }
-   /* invalid color */
-   .input-field input[type=text].invalid {
-     border-bottom: 1px solid #d96060;
-     box-shadow: 0 1px 0 0 #7b7b7b;
-   }
+#gallery-main {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.thumb-row {
+	max-height: 25px;
+}
+
+.thumbnail-img > img{
+	max-width: 100%;
+	max-height: 50px;
+}
+
+/* label color */
+.input-field label {
+ color: #7b7b7b;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #80cbc4;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #80cbc4;
+ box-shadow: 0 1px 0 0 #7b7b7b;
+}
+/* valid color */
+.input-field input[type=text].valid {
+ border-bottom: 1px solid #7bdf79;
+ box-shadow: 0 1px 0 0 #7b7b7b;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+ border-bottom: 1px solid #d96060;
+ box-shadow: 0 1px 0 0 #7b7b7b;
+}
 .waves-effect {
       background-color: #80cbc4;
 }
