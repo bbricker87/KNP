@@ -17,5 +17,5 @@ function cycleSlide() {
   };
 
   function startLoop () {
-    setInterval(cycleSlide, 5000);
+    setInterval(cycleSlide, 10000);
   };

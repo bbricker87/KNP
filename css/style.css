@@ -119,18 +119,46 @@ h1, h2, h3 {
 	margin-top: 0px;
 }
 
-#gallery-main {
+.success{
+	border-radius: 10px;
+	margin: 25px 0px;
+	padding: 25px 0px;
+	background-color: #4db6ac;
+	color: #eeeeee;
+	box-shadow: 0px 3px 10px 0px #aaaaaa;
+}
+
+.error{
+	border-radius: 10px;
+	margin: 25px 0px;
+	padding: 25px 50px;
+	background-color: #d32f2f;
+	color: #eeeeee;
+	box-shadow: 0px 3px 10px 0px #aaaaaa;
+}
+
+#gallery-main-lg,
+#gallery-main-md,
+#gallery-main-sm {
 	max-width: 100%;
-	max-height: 100%;
+	max-height: 535px;
+}
+
+.gallery-wrap{
+	min-height: 540px;
+	max-height: 540px;
 }
 
 .thumb-row {
 	max-height: 25px;
 }
 
-.thumbnail-img > img{
+.thumbnail-img {
 	max-width: 100%;
 	max-height: 50px;
+}
+.thumbnail-img:hover {
+	box-shadow: 0px 0px 10px 2px #aaaaaa;
 }
 
 /* label color */
