@@ -83,27 +83,27 @@
 			  	<div class="col l4 main-text">
 			  		<p style="margin: 0px 15px; text-align: center;">Please feel free to contact me if you are interested in a photography session, submitting a testimonial, or if you have any questions or concerns.</p>
 			  	</div>
-			  	<div class="col l8">
+			  	<form class="col l8" id="contact" method="post" action="php/contactForm.php">
 			  		<div class="row">
 					  	<div class="input-field col s6">
-		        		    <input id="first-name-lg" type="text" class="validate">
-		       			    <label for="first-name-lg">First Name</label>
+		        		    <input id="name" type="text" class="validate" required>
+		       			    <label for="name">First Name</label>
 		       			</div>
 		       			<div class="input-field col s6">
-		        		    <input id="last-name-lg" type="text" class="validate">
+		        		    <input id="last-name-lg" type="text" class="validate" required>
 		            		<label for="last-name-lg">Last Name</label>
 		       			</div>
         			</div>			  	
         			<div class="row">
 					  	<div class="input-field col s12">
-		        		    <input id="email-lg" type="email" class="validate">
-		       			    <label for="email-lg">Email</label>
+		        		    <input id="email" type="email" class="validate" required>
+		       			    <label for="email">Email</label>
 		       			</div>
         			</div>	  	
         			<div class="row">
 					  	<div class="input-field col s12">
-		        		    <textarea id="message-lg" class="materialize-textarea validate"></textarea>
-          					<label for="message-lg">Message</label>
+		        		    <textarea id="message" class="materialize-textarea validate" required></textarea>
+          					<label for="message">Message</label>
 		       			</div>
         			</div>
         			<div class="row center-align">
@@ -111,7 +111,8 @@
    							<i class="mdi-content-send right"></i>
     					</button>
     				</div>
-			  	</div>
+			  	</form>
+			  	<div class="form-messages col s12"></div>
 		  	</div>
 
 		  	<br>

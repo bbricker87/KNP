@@ -1,42 +1,50 @@
-$(document).ready(function() {
+$(function() {
 
-	$("#submit-lg").click(function() {
-		var nameLg = $("#first-name-lg").val() + $('#last-name-lg').val();
-		var emailLg = $("#email-lg").val();
-		var messageLg = $("#message-lg").val();
+	var name = $('#first-name-lg').val() + ' ' + $('#last-name-lg').val();
+	var email = $('#email-lg').val();
+	var message = $('#message-lg').val();
 
-		if(!validateName(nameLg) || nameLg == ''){
-			Materialize.toast('Please use a valid name', 2500);
-		}
-		if(!validateEmail(emailLg) || emailLg == ''){
-			Materialize.toast('Please use a valid email', 2500);
-		}
-		if(messageLg == ''){
-			Materialize.toast('Please use a valid message', 2500);
-		}
+    // Get the form.
+    var form = $('#contact');
 
-		// Checking for blank fields.
-		if (nameValid && emailValid && messageValid) {
-			// Returns successful data submission message when the entered information is stored in database.
-			$.post("../php/contactForm.php", {
-			name1: nameLg,
-			email1: emailLg,
-			message1: messageLg
-			}, function(data) {
-				$("#returnmessage").append(data); // Append returned message to message paragraph.
-				if (data == "Your Query has been received, We will contact you soon.") {
-					$("#first-name-lg").reset(); // To reset form fields on success.
-				}
-			});
-		}
-	});
+    // Get the messages div.
+    var formMessages = $('#form-messages');
 
-	function validateName(nameVal){
-		return /^[a-zA-Z()]+$/.test(nameVal);
-	}
+    $(form).submit(function(event) {
+    	event.preventDefault();
 
-	function validateEmail(emailVal){
-		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  		return regex.test(emailVal);
-	}
+    	var formData = "name1=" + name + "&email1=" + email + "&message1=" + message;
+
+    	$.ajax({
+    		type: 'POST',
+    		url: 'php/contactForm.php',
+    		data: formData
+    	})
+    	.done(function(response) {
+		    // Make sure that the formMessages div has the 'success' class.
+		    $(formMessages).removeClass('error');
+		    $(formMessages).addClass('success');
+
+		    // Set the message text.
+		    $(formMessages).text(response);
+
+		    // Clear the form.
+		    $('#first-name-lg').val('');
+		    $('#last-name-lg').val('');
+		    $('#email-lg').val('');
+		    $('#message-lg').val('');
+		})
+		.fail(function(data) {
+		    // Make sure that the formMessages div has the 'error' class.
+		    $(formMessages).removeClass('success');
+		    $(formMessages).addClass('error');
+
+		    // Set the message text.
+		    if (data.responseText !== '') {
+		        $(formMessages).text(data.responseText);
+		    } else {
+		        $(formMessages).text('Oops! An error occured and your message could not be sent.');
+		    }
+		});
+    })
 });
