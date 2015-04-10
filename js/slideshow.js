@@ -12,7 +12,7 @@ function cycleSlide() {
         slideIndex = 0;
       }
 
-    document.getElementById("banner-img").src = "img/slides/img" + slideIndex.toString() + ".jpg";
+      fadeOutImage('#banner-img', "img/slides/img" + slideIndex.toString() + ".jpg");
 
   };
 

@@ -1,5 +1,5 @@
 var galleryIndex = 0;
-var gallerySlides = 4;
+var gallerySlides = 12;
 var galleryType = '';
 var intervalID;
 
@@ -8,30 +8,48 @@ var intervalID;
   });
 
 function galleryCycle() {
-  
+
       galleryIndex++;
       if(galleryIndex == gallerySlides){
         galleryIndex = 0;
       }
-
-    document.getElementById("gallery-main-lg").src = "img/galleries/" + galleryType + "/img" + galleryIndex.toString() + ".jpg";
-    document.getElementById("gallery-main-md").src = "img/galleries/" + galleryType + "/img" + galleryIndex.toString() + ".jpg";
-    document.getElementById("gallery-main-sm").src = "img/galleries/" + galleryType + "/img" + galleryIndex.toString() + ".jpg";
-
+  
+    fadeOutImage('#gallery-main-lg', "img/galleries/" + galleryType + "/img" + galleryIndex.toString() + ".jpg");
+    fadeOutImage('#gallery-main-md', "img/galleries/" + galleryType + "/img" + galleryIndex.toString() + ".jpg");
+    fadeOutImage('#gallery-main-sm', "img/galleries/" + galleryType + "/img" + galleryIndex.toString() + ".jpg");  
   };
 
   function startGalleryLoop () {
-    intervalID = setInterval(galleryCycle, 4000);
+    intervalID = setInterval(galleryCycle, 6000);
   };
 
   $('.thumbnail-img').click(function(){
 
     clearInterval(intervalID);
 
-    document.getElementById("gallery-main-lg").src = "img/galleries/" + galleryType + "/" + $(this).attr('name') + ".jpg";
-    document.getElementById("gallery-main-md").src = "img/galleries/" + galleryType + "/" + $(this).attr('name') + ".jpg";
-    document.getElementById("gallery-main-sm").src = "img/galleries/" + galleryType + "/" + $(this).attr('name') + ".jpg";
+    galleryIndex = $(this).attr('name').replace(/\D/g,'');
 
-    intervalID = setInterval(galleryCycle, 4000);
+    fadeOutImage('#gallery-main-lg', "img/galleries/" + galleryType + "/img" + galleryIndex.toString() + ".jpg");
+    fadeOutImage('#gallery-main-md', "img/galleries/" + galleryType + "/img" + galleryIndex.toString() + ".jpg");
+    fadeOutImage('#gallery-main-sm', "img/galleries/" + galleryType + "/img" + galleryIndex.toString() + ".jpg");   
+
+    intervalID = setInterval(galleryCycle, 6000);
 
   });
+
+function fadeOutImage(elementName, newSource){
+
+  var imageElement = $(elementName);
+
+  imageElement.fadeOut(500, function(){
+      changeSource(imageElement, newSource);
+  })
+
+}
+
+function changeSource(imgElement, newSource){
+
+  imgElement.attr('src', newSource);
+
+  imgElement.fadeIn(1000);
+}
